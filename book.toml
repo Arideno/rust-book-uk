@@ -1,0 +1,11 @@
+[book]
+authors = ["Стів Клабнік та Керол Нікольз, з допомогою ком'юніті Rust"]
+language = "uk"
+multilingual = false
+src = "src"
+title = "Мова програмування Rust"
+
+[output.html]
+additional-css = ["ferris.css", "theme/2018-edition.css"]
+additional-js = ["ferris.js"]
+git-repository-url = "https://github.com/Arideno/rust-book-uk"
