@@ -1,70 +1,42 @@
-# Introduction
+# Вступ
 
-> Note: This edition of the book is the same as [The Rust Programming
-> Language][nsprust] available in print and ebook format from [No Starch
-> Press][nsp].
+> Примітка: Це видання книги є таким самим як [The Rust Programming
+> Language][nsprust], яке доступне на англійській мові у друкованому та ebook форматах від [No Starch Press][nsp].
 
 [nsprust]: https://nostarch.com/rust
 [nsp]: https://nostarch.com/
 
-Welcome to *The Rust Programming Language*, an introductory book about Rust.
-The Rust programming language helps you write faster, more reliable software.
-High-level ergonomics and low-level control are often at odds in programming
-language design; Rust challenges that conflict. Through balancing powerful
-technical capacity and a great developer experience, Rust gives you the option
-to control low-level details (such as memory usage) without all the hassle
-traditionally associated with such control.
+Ласкаво просимо до *Мова програмування Rust* - вступної книги про Rust.
+Мова програмування Rust допомагає вам писати програмне забезпечення швидше та надійніше. Ергономіка високого рівня та низький рівень управління часто суперечать між собою; Rust кидає виклик цьому конфлікту. Завдяки збалансуванню потужних технічних можливостей та чудовому розробницькому досвіду, Rust дає вам можливість контролювати деталі низького рівня (наприклад, використання пам'яті) буз зайвих клопотів, які асоціюються з таким контролем.
 
-## Who Rust Is For
+## Для кого Rust
 
-Rust is ideal for many people for a variety of reasons. Let’s look at a few of
-the most important groups.
+Rust ідеально підходить для багатьох людей з різних причин. Давайте розглянемо кілька найважливіших груп людей.
 
-### Teams of Developers
+### Команди розробників
 
-Rust is proving to be a productive tool for collaborating among large teams of
-developers with varying levels of systems programming knowledge. Low-level code
-is prone to a variety of subtle bugs, which in most other languages can be
-caught only through extensive testing and careful code review by experienced
-developers. In Rust, the compiler plays a gatekeeper role by refusing to
-compile code with these elusive bugs, including concurrency bugs. By working
-alongside the compiler, the team can spend their time focusing on the program’s
-logic rather than chasing down bugs.
+Rust - це продуктивний інструмент для співпраці поміж великих команд розробників з різним рівнем знань із системного програмування. Low-level код схильний до різноманітних тонких помилок, які, в більшості інших мов, можна знайти лише під час широкого тестування та ретельного code review досвідченими розробниками.
+У Rust компілятор грає роль голкіпера відмовляючись компілювати код з цими невловимими багами, включаючи баги у багатопоточних програмах. Працюючи разом із компілятором, команда може сфокусуватись над логікою програми, а не над пошуком багів.
 
-Rust also brings contemporary developer tools to the systems programming world:
+Rust також має сучасні інструменти для розробки, яких немає у других системних мовах програмування:
 
-* Cargo, the included dependency manager and build tool, makes adding,
-  compiling, and managing dependencies painless and consistent across the Rust
-  ecosystem.
-* Rustfmt ensures a consistent coding style across developers.
-* The Rust Language Server powers Integrated Development Environment (IDE)
-  integration for code completion and inline error messages.
+* Cargo - менеджер залежностей та інструмент збирання програм, робить додавання, компілювання та управління залежностями безболісним по всій екосистемі Rust.
+* Rustfmt забезпечує правильний стиль коду для розробників.
+* Сервер Rust забезпучує Інтегроване Середовище Розробки (IDE) для code completion та повідомлень про помилки.
 
-By using these and other tools in the Rust ecosystem, developers can be
-productive while writing systems-level code.
+Використовуючи ці та інші інструменти в екосистемі Rust, розробники можуть бути продуктивні під час написання системного коду.
 
-### Students
+### Студенти
 
-Rust is for students and those who are interested in learning about systems
-concepts. Using Rust, many people have learned about topics like operating
-systems development. The community is very welcoming and happy to answer
-student questions. Through efforts such as this book, the Rust teams want to
-make systems concepts more accessible to more people, especially those new to
-programming.
+Rust призначений для студентів та тих, хто зацікавлений у вивченні концепцій операційних систем. Використовуючи Rust, багато людей дізналися про такі теми, як розробка операційних систем. Ком'юніті дуже привітний і радий відповісти на запитання новачків. Завдяки таким зусиллям, як ця книга, команди, які програмують на Rust, роблять концепції операційних систем більш доступними для більшої кількості людей, особливо для тих, хто не знайомий з програмуванням.
 
-### Companies
+### Компанії
 
-Hundreds of companies, large and small, use Rust in production for a variety of
-tasks. Those tasks include command line tools, web services, DevOps tooling,
-embedded devices, audio and video analysis and transcoding, cryptocurrencies,
-bioinformatics, search engines, Internet of Things applications, machine
-learning, and even major parts of the Firefox web browser.
+Сотні компаній, великих і малих, використовують Rust у розробці для різних задач. Ці задачі включають в себе CLI, веб сервіси, інструменти для DevOps, вбудовані пристрої, аналіз і перекодування аудіо та відео, криптовалюти, біоінформатика, пошукові системи, Інтернет Речей, машинне навчання та навіть основні частини веб браузера Firefox.
 
-### Open Source Developers
+### Open Source Розробники
 
-Rust is for people who want to build the Rust programming language, community,
-developer tools, and libraries. We’d love to have you contribute to the Rust
-language.
+Rust призначений для людей, які хочуть створювати мову програмування Rust, ком'юніті, інструменти розробника та бібліотеки. Ми хотіли б, щоб ви зробили свій внесок у мову Rust.
 
 ### People Who Value Speed and Stability
 

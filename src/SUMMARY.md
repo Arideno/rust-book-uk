@@ -6,7 +6,7 @@
 
 ## Початок
 
-- [Починаємо](ch01-00-getting-started.md)
+- [Початок](ch01-00-getting-started.md)
     - [Встановлення](ch01-01-installation.md)
     - [Привіт, світ!](ch01-02-hello-world.md)
     - [Привіт, Cargo!](ch01-03-hello-cargo.md)
