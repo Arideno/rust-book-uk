@@ -20,7 +20,7 @@
     - [Коментарі](ch03-04-comments.md)
     - [Управління виконанням коду](ch03-05-control-flow.md)
 
-- [Розумення власності](ch04-00-understanding-ownership.md)
+- [Розуміння власності](ch04-00-understanding-ownership.md)
     - [Що таке власність?](ch04-01-what-is-ownership.md)
     - [Посилання та Запозичення](ch04-02-references-and-borrowing.md)
     - [Зрізи](ch04-03-slices.md)
@@ -87,7 +87,7 @@
     - [Встановлення Бінарників з Crates.io з `cargo install`](ch14-04-installing-binaries.md)
     - [Розширення Cargo за допомогою кастомних команд](ch14-05-extending-cargo.md)
 
-- [Розумні Покажчиків](ch15-00-smart-pointers.md)
+- [Розумні Покажчики](ch15-00-smart-pointers.md)
     - [Використання `Box <T>` для вказування на дані у купі](ch15-01-box.md)
     - [Обробка розумних покажчиків як звичайних посилань з трейтом `Deref`](ch15-02-deref.md)
     - [Запуск коду після деініціалізації з трейтом `Drop`](ch15-03-drop.md)

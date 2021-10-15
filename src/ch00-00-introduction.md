@@ -7,7 +7,7 @@
 [nsp]: https://nostarch.com/
 
 Ласкаво просимо до *Мова програмування Rust* - вступної книги про Rust.
-Мова програмування Rust допомагає вам писати програмне забезпечення швидше та надійніше. Ергономіка високого рівня та низький рівень управління часто суперечать між собою; Rust кидає виклик цьому конфлікту. Завдяки збалансуванню потужних технічних можливостей та чудовому розробницькому досвіду, Rust дає вам можливість контролювати деталі низького рівня (наприклад, використання пам'яті) буз зайвих клопотів, які асоціюються з таким контролем.
+Мова програмування Rust допомагає вам писати програмне забезпечення швидше та надійніше. Ергономіка високого рівня та низький рівень управління часто суперечать між собою; Rust кидає виклик цьому конфлікту. Завдяки збалансуванню потужних технічних можливостей та чудовому розробницькому досвіду, Rust дає вам можливість контролювати деталі низького рівня (наприклад, використання пам'яті) без зайвих клопотів, які асоціюються з таким контролем.
 
 ## Для кого Rust
 
@@ -22,7 +22,7 @@ Rust також має сучасні інструменти для розроб
 
 * Cargo - менеджер залежностей та інструмент збирання програм, робить додавання, компілювання та управління залежностями безболісним по всій екосистемі Rust.
 * Rustfmt забезпечує правильний стиль коду для розробників.
-* Сервер Rust забезпучує Інтегроване Середовище Розробки (IDE) для code completion та повідомлень про помилки.
+* Сервер Rust забезпечує Інтегроване Середовище Розробки (IDE) для code completion та повідомлень про помилки.
 
 Використовуючи ці та інші інструменти в екосистемі Rust, розробники можуть бути продуктивні під час написання системного коду.
 
@@ -38,125 +38,59 @@ Rust призначений для студентів та тих, хто зац
 
 Rust призначений для людей, які хочуть створювати мову програмування Rust, ком'юніті, інструменти розробника та бібліотеки. Ми хотіли б, щоб ви зробили свій внесок у мову Rust.
 
-### People Who Value Speed and Stability
+### Люди, які цінують швидкість і стабільність
 
-Rust is for people who crave speed and stability in a language. By speed, we
-mean the speed of the programs that you can create with Rust and the speed at
-which Rust lets you write them. The Rust compiler’s checks ensure stability
-through feature additions and refactoring. This is in contrast to the brittle
-legacy code in languages without these checks, which developers are often
-afraid to modify. By striving for zero-cost abstractions, higher-level features
-that compile to lower-level code as fast as code written manually, Rust
-endeavors to make safe code be fast code as well.
+Rust - для людей, які прагнуть швидкості та стабільності у мові програмування. За швидкістю ми маємо на увазі швидкість програм, які можна створити за допомогою Rust, і швидкість на якій Rust дозволяє вам їх написати. Перевірки компілятора Rust забезпечують стабільність за рахунок додавання функцій та рефакторингу, на відміну від крихкого, застарілого коду в мовах, де немає цих перевірок, який розробники часто бояться змінювати. Прагнучи до zero-cost абстракцій, функцій більш високого рівня що компілюються до low-level коду так само швидко, як і код, написаний вручну, Rust намагається зробити безпечний код швидким.
 
-The Rust language hopes to support many other users as well; those mentioned
-here are merely some of the biggest stakeholders. Overall, Rust’s greatest
-ambition is to eliminate the trade-offs that programmers have accepted for
-decades by providing safety *and* productivity, speed *and* ergonomics. Give
-Rust a try and see if its choices work for you.
+Мова Rust підтримує і багатьох інших користувачів; згадані тут лише деякі з найбільших зацікавлених груп. Загалом, найбільша амбіція Rust полягає у усуненні компромісів, на які погодилися програмісти десятиліття тому, забезпечуючи безпеку *та* продуктивність, швидкість *та* ергономічність.
 
-## Who This Book Is For
+## Для кого ця книга
 
-This book assumes that you’ve written code in another programming language but
-doesn’t make any assumptions about which one. We’ve tried to make the material
-broadly accessible to those from a wide variety of programming backgrounds. We
-don’t spend a lot of time talking about what programming *is* or how to think
-about it. If you’re entirely new to programming, you would be better served by
-reading a book that specifically provides an introduction to programming.
+Ця книга припускає, що ви писали код іншою мовою програмування, але не важливо на якій саме. Ми намагалися зробити матеріал загальнодоступним для широкого кола розробників. Ми не витрачаємо багато часу на розмови про те, що таке програмування або як мислити про нього. Якщо ви зовсім не знайомі з програмуванням, то вам краще прочитати книгу, яка спеціально містить вступ до програмування.
 
-## How to Use This Book
+## Як читати цю книгу
 
-In general, this book assumes that you’re reading it in sequence from front to
-back. Later chapters build on concepts in earlier chapters, and earlier
-chapters might not delve into details on a topic; we typically revisit the
-topic in a later chapter.
+Загалом, ця книга передбачає, що ви читаєте її послідовно від початку до кінця. Пізніші глави ґрунтуються на концепціях у попередніх розділах, та попередні розділи можуть не заглиблюватись у деталі теми; ми зазвичай знову переглядаємо тему у наступному розділі.
 
-You’ll find two kinds of chapters in this book: concept chapters and project
-chapters. In concept chapters, you’ll learn about an aspect of Rust. In project
-chapters, we’ll build small programs together, applying what you’ve learned so
-far. Chapters 2, 12, and 20 are project chapters; the rest are concept chapters.
+У цій книзі ви знайдете два види глав: концептуальні та проектні. У концептуальних розділах ви дізнаєтесь про один аспект у Rust. У проектних розділах, ми разом будуватимемо невеликі програми, застосовуючи те, що ви вивчили. Розділи 2, 12 та 20 є проектними розділами; решта - концептуальні.
 
-Chapter 1 explains how to install Rust, how to write a “Hello, world!” program,
-and how to use Cargo, Rust’s package manager and build tool. Chapter 2 is a
-hands-on introduction to the Rust language. Here we cover concepts at a high
-level, and later chapters will provide additional detail. If you want to get
-your hands dirty right away, Chapter 2 is the place for that. At first, you
-might even want to skip Chapter 3, which covers Rust features similar to those
-of other programming languages, and head straight to Chapter 4 to learn about
-Rust’s ownership system. However, if you’re a particularly meticulous learner
-who prefers to learn every detail before moving on to the next, you might want
-to skip Chapter 2 and go straight to Chapter 3, returning to Chapter 2 when
-you’d like to work on a project applying the details you’ve learned.
+У 1-му розділі пояснюється, як встановити Rust, як написати програму “Привіт, світ!”, і як користуватися Cargo, менеджером пакетів та інструментом для зібрання програми на Rust. Розділ 2 - це практичний вступ до мови Rust. Тут ми охоплюємо концепції на високому рівні, а подальші розділи нададуть додаткову інформацію. Якщо хочете одразу забруднити руки, Розділ 2 - це та сама нагода. Спочатку ви
+можливо, навіть захочете пропустити Розділ 3, який охоплює функції Rust, подібні до тих, які є в інших мовах програмування, і перейти безпосередньо до Розділу 4, щоб дізнатися про систему власності Rust. Однак, якщо ви особливо прискіпліві, вважаєте за краще вивчити кожну деталь, перш ніж перейти до наступної, можливо, вам захочеться пропустити 2-й розділ і перейти безпосередньо до 3-го розділу. Потім повернутись до 2-го розділу коли дізнаєтесь деталі і зробити проект.
 
-Chapter 5 discusses structs and methods, and Chapter 6 covers enums, `match`
-expressions, and the `if let` control flow construct. You’ll use structs and
-enums to make custom types in Rust.
+У 5-му розділі розповідається про структури та методи, а в 6-му розділі - перерахування, `match` та конструкція `if let`. Ви використовуватимете структури та перерахування для створення власних типів у Rust.
 
-In Chapter 7, you’ll learn about Rust’s module system and about privacy rules
-for organizing your code and its public Application Programming Interface
-(API). Chapter 8 discusses some common collection data structures that the
-standard library provides, such as vectors, strings, and hash maps. Chapter 9
-explores Rust’s error-handling philosophy and techniques.
+У 7-му розділі ви дізнаєтесь про систему модулів Rust та правила інкапсуляції для організації вашого коду та його публічного API. У 8-му розділі обговорюються деякі поширені структури даних, які надає стандартна бібліотека, такі як вектори, рядки та хеш-таблиці. 9-й розділ досліджує філософію та методи обробки помилок у Rust.
 
-Chapter 10 digs into generics, traits, and lifetimes, which give you the power
-to define code that applies to multiple types. Chapter 11 is all about testing,
-which even with Rust’s safety guarantees is necessary to ensure your program’s
-logic is correct. In Chapter 12, we’ll build our own implementation of a subset
-of functionality from the `grep` command line tool that searches for text
-within files. For this, we’ll use many of the concepts we discussed in the
-previous chapters.
+У 10-му розділі розповідається про дженерики, трейти та лайфтайми, які дають вам силу
+для написання коду, який застосовується до багатьох типів. 11-й розділ - це все про тестування, яке навіть із гарантіями безпеки Rust необхідне для забезпечення правильності логіки вашої програми. У 12-му розділі ми побудуємо власну реалізацію деяких функцій CLI інструменту `grep`, який здійснює пошук тексту у файлах. Для цього ми будемо використовувати багато концепцій, які ми обговорювали в попередніх розділах.
 
-Chapter 13 explores closures and iterators: features of Rust that come from
-functional programming languages. In Chapter 14, we’ll examine Cargo in more
-depth and talk about best practices for sharing your libraries with others.
-Chapter 15 discusses smart pointers that the standard library provides and the
-traits that enable their functionality.
+13-й розділ досліджує замикання та ітератори - особливості Rust, які прийшли від функціональних мов програмування. У 14-му розділі ми детальніше розглянемо Cargo і поговорімо про найкращі практики розповсюдження своїх бібліотек. У 15-му розділі обговорюються розумні покажчики, які надає стандартна бібліотека, і трейти, які забезпечують їх функціональність.
 
-In Chapter 16, we’ll walk through different models of concurrent programming
-and talk about how Rust helps you to program in multiple threads fearlessly.
-Chapter 17 looks at how Rust idioms compare to object-oriented programming
-principles you might be familiar with.
+У 16-му розділі ми розглянемо різні моделі паралельного програмування і розкажемо про те, як Rust допомагає вам програмувати в декількох потоках нічого не боючись. У 17-му розділі розглянуто, як ідіоми Rust порівнюються з принципами об'єктно-орієнтованого програмування, які вам можуть бути відомі.
 
-Chapter 18 is a reference on patterns and pattern matching, which are powerful
-ways of expressing ideas throughout Rust programs. Chapter 19 contains a
-smorgasbord of advanced topics of interest, including unsafe Rust, macros, and
-more about lifetimes, traits, types, functions, and closures.
+Розділ 18 - це довідка про шаблони та відповідність шаблонам, які є потужними способами вираження логіки у програмах на Rust. 19-й розділ містить багато просунутих тем, такі як: небезпечний Rust, макроси, та докладніше розповідає про лайфтайми, трейти, типи, функції та замикання.
 
-In Chapter 20, we’ll complete a project in which we’ll implement a low-level
-multithreaded web server!
+У 20-му розділі ми зробимо проект - low-level багатопотоковий веб-сервер!
 
-Finally, some appendices contain useful information about the language in a
-more reference-like format. Appendix A covers Rust’s keywords, Appendix B
-covers Rust’s operators and symbols, Appendix C covers derivable traits
-provided by the standard library, Appendix D covers some useful development
-tools, and Appendix E explains Rust editions.
+Нарешті, деякі додатки містять корисну інформацію про мову у більш довідковому форматі. Додаток А охоплює ключові слова Rust, Додаток В охоплює оператори та символи Rust, Додаток С - похідні трейти стандартної бібліотеки, Додаток D охоплює деякі корисні інструменти розробки, а Додаток E розповідає про видання Rust.
 
-There is no wrong way to read this book: if you want to skip ahead, go for it!
-You might have to jump back to earlier chapters if you experience any
-confusion. But do whatever works for you.
+Немає правильного способу читати цю книгу - якщо ви хочете йти вперед, ідіть!
+Можливо, вам доведеться повернутися до попередніх розділів, якщо у вас виникли проблеми. Але робіть все, що підходить саме вам.
 
 <span id="ferris"></span>
 
-An important part of the process of learning Rust is learning how to read the
-error messages the compiler displays: these will guide you toward working code.
-As such, we’ll provide many examples that don’t compile along with the error
-message the compiler will show you in each situation. Know that if you enter
-and run a random example, it may not compile! Make sure you read the
-surrounding text to see whether the example you’re trying to run is meant to
-error. Ferris will also help you distinguish code that isn’t meant to work:
+Важливою частиною процесу вивчення мови Rust є уміння читати повідомлення про помилки, які відображає компілятор - вони направлять вас до робочого коду. Таким чином, ми наведемо багато прикладів, які не компілюються разом з повідомленням про помилку, яке компілятор покаже вам у кожній ситуації. Зазначте, що якщо ви запустите випадковий приклад, він може не скомпілюватись! Обов’язково прочитайте текст навколо, щоб зрозуміти, чи цей приклад не призначений для демонстрації помилки.
 
-| Ferris                                                                                                           | Meaning                                          |
-|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| <img src="img/ferris/does_not_compile.svg" class="ferris-explain" alt="Ferris with a question mark"/>            | This code does not compile!                      |
-| <img src="img/ferris/panics.svg" class="ferris-explain" alt="Ferris throwing up their hands"/>                   | This code panics!                                |
-| <img src="img/ferris/not_desired_behavior.svg" class="ferris-explain" alt="Ferris with one claw up, shrugging"/> | This code does not produce the desired behavior. |
+| Ferris                                                                                                           | Значення                                          |
+|------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| <img src="img/ferris/does_not_compile.svg" class="ferris-explain" alt="Ferris with a question mark"/>            | Цей код не компілюється!                        |
+| <img src="img/ferris/panics.svg" class="ferris-explain" alt="Ferris throwing up their hands"/>                   | Цей код панікує!                                |
+| <img src="img/ferris/not_desired_behavior.svg" class="ferris-explain" alt="Ferris with one claw up, shrugging"/> | Цей код працює не так, як треба.                |
 
-In most situations, we’ll lead you to the correct version of any code that
-doesn’t compile.
+У більшості ситуацій ми підведемо вас до правильної версії будь-якого коду, який не компілюється.
 
 ## Source Code
 
-The source files from which this book is generated can be found on
-[GitHub][book].
+Файли з вихідним кодом, який використовується в цій книзі, можна знайти на [GitHub][book].
 
-[book]: https://github.com/rust-lang/book/tree/master/src
+[book]: https://github.com/Arideno/rust-book-uk
