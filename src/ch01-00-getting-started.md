@@ -1,8 +1,7 @@
-# Getting Started
+# Початок
 
-Let’s start your Rust journey! There’s a lot to learn, but every journey starts
-somewhere. In this chapter, we’ll discuss:
+Розпочнемо вашу подорож у Rust! Є багато чому навчитися, але кожна подорож колись починається. У цьому розділі ми обговоримо:
 
-* Installing Rust on Linux, macOS, and Windows
-* Writing a program that prints `Hello, world!`
-* Using `cargo`, Rust’s package manager and build system
+* Встановлення Rust на Linux, macOS та Windows
+* Написання програми, яка друкує `Привіт, світ!`
+* Використання `cargo`, менеджер пакетів і систему збірки Rust
